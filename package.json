@@ -1,0 +1,32 @@
+{
+  "name": "castle",
+  "version": "0.0.1",
+  "description": "a castle for little princess",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linxixuan/castle.git"
+  },
+  "keywords": [
+    "node",
+    "koa",
+    "static"
+  ],
+  "author": "zhangmengxuan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/linxixuan/castle/issues"
+  },
+  "homepage": "https://github.com/linxixuan/castle#readme",
+  "dependencies": {
+    "co": "^4.6.0",
+    "koa": "^1.2.0",
+    "koa-body": "^1.4.0",
+    "koa-logger": "^1.3.0",
+    "koa-router": "^5.4.0",
+    "koa-static": "^2.0.0"
+  }
+}
