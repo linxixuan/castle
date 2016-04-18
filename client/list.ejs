@@ -1,4 +1,12 @@
-<!-- 列出所有的作品 -->
-<% list.forEach(function(article){ %>
- <a href="/article/<%= article %>"><%= article %></a>
-<% }) %>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="/static/images/favicon-32x32.png" sizes="32x32">
+    <title>castle</title>
+</head>
+<body>
+    <% list.forEach(function(article){ %>
+     <a href="/article/<%= article %>"><%= article %></a>
+    <% }) %>
+<body>
+</html>
