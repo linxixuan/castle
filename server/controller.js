@@ -16,7 +16,6 @@ var Controller = {
     },
 
     static: function*() {
-        console.log(this.params);
         var fileName = this.params.file;
         var pathName = this.params.path;
 
@@ -30,14 +29,26 @@ var Controller = {
     },
 
     article: function*() {
-        console.log('-----');
-        console.log(this.params);
         var name = this.params.name;
         var path = articlePath + '/' + name + '/index.html';
         var html = fs.readFileSync(path).toString();
 
         this.set('Content-Type', 'text/html');
         this.body = html.replace(/\.\//g, name + '/');
+    },
+
+    create: function() {
+        var content = fs.readFileSync(path.resolve(__dirname, '../client/post.ejs'));
+        var list = fs.readdirSync(articlePath);
+
+        this.body = ejs.render(content.toString(), {
+            list: list
+        });
+    },
+
+    postfile: function() {
+        var body = this.request.body;
+        console.log(body);
     }
 };
 

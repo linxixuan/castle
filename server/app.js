@@ -6,7 +6,7 @@ var logger = require('koa-logger');
 var app = koa();
 
 app.use(logger());
-app.use(koaStatic('../articles'));
+app.use(koaStatic('.'));
 
 var router = require('./router.js');
 
